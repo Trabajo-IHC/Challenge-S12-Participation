@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Perfil</h1>
+        <div class="profile-details">
+            <div class="profile">
+                <ul class="usuario">
+                    <li>
+                        <a href="#" class="logo">
+                            <img src="images/usuario.png" alt="Foto de Perfil" class="profile-img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="details">
+                <ul class="llenado_datos">
+                    <li>
+                        <label for="fname">Datos personales</label>
+                        <span class="toggle">+</span>
+                        <input type="text" id="fname" name="fname">
+                    </li>
+                    <li>
+                        <label for="fono">Correo</label>
+                        <span class="toggle">+</span>
+                        <input type="text" id="fono" name="fono">
+                    </li>
+                    <li>
+                        <label for="correo">Sincronización</label>
+                        <span class="toggle">+</span>
+                        <input type="text" id="correo" name="correo">
+                    </li>
+                    <li>
+                        <label for="asunto">Idioma</label>
+                        <span class="toggle">+</span>
+                        <input type="text" id="asunto" name="asunto">
+                    </li>
+                    <li>
+                        <button id="logout" class="black-button">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <div class="button-group">
+            <a href="Main.html"><button class="blue-button">Reporte</button></a>
+            <a href="Comentarios.html"><button class="blue-button">Comentarios</button></a>
+            <a href="Profile.html"><button class="blue-button">Perfil</button></a>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

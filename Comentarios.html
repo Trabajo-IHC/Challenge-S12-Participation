@@ -1,0 +1,65 @@
+<!DOCTYPE COMENTARIOS>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Reportes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="logo.jpeg" type="image/jpeg"> <!-- Favicon -->
+</head>
+<body>
+    <div class="container">
+        <h1>Comentarios</h1>
+        <div class="location-text">Ingrese la ubicación deseada</div>
+        <div class="location-wrapper">
+            <img src="images/location-icon.png" alt="Ubicación" class="location-icon">
+            <div class="location-bar"></div>
+        </div>
+    </div>
+
+    <div class="report-area">
+        <button id="reportAreaButton" class="black-button">Reportar área</button>
+    </div>
+
+    <div class="modal" id="reportModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Reportar área</h2>
+            <form id="reportForm">
+                <label for="reportName">Nombre:</label>
+                <input type="text" id="reportName" name="reportName" required>
+                
+                <label for="reportComment">Comentario:</label>
+                <textarea id="reportComment" name="reportComment" rows="2" required></textarea>
+
+                <label>Calificación:</label>
+                <div class="star-rating">
+                    <input type="radio" name="rating" value="5" id="5" required><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+                
+                <button type="submit" class="black-button">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="commentsSection">
+        <h2>Comentarios</h2>
+        <div class="comments-container"></div>
+    </div>
+
+    <div class="footer">
+        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <div class="button-group">
+            <a href="Main.html"><button class="blue-button">Reporte</button></a>
+            <a href="Comentarios.html"><button class="blue-button">Comentarios</button></a>
+            <a href="Profile.html"><button class="blue-button">Perfil</button></a>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
