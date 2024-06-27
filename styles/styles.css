@@ -149,65 +149,113 @@ h1, h2 {
 
 /* Botones negros */
 .black-button {
-    background-color: #000;
+    background-color: #333;
     color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 .black-button:hover {
-    background-color: #333;
+    background-color: #555;
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease;
     align-items: center;
     justify-content: center;
 }
 
+/* Modal Content */
 .modal-content {
-    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #e3e3e3);
+    margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slide-down 0.5s ease-out;
 }
 
+/* Keyframes for animation */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
 .close-button {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.2s;
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
+/* Form Styles */
+#reportForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#reportForm label {
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+#reportForm input[type="text"],
+#reportForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: border 0.2s;
+}
+
+#reportForm input[type="text"]:focus,
+#reportForm textarea:focus {
+    border: 1px solid #007BFF;
+    outline: none;
+}
+
 .star-rating {
     display: flex;
-    direction: row-reverse;
     justify-content: center;
+    padding: 10px 0;
+    font-size: 2em;
+    direction: rtl; /* Esto invierte el orden de las estrellas */
 }
 
 .star-rating input {
@@ -215,16 +263,55 @@ h1, h2 {
 }
 
 .star-rating label {
-    font-size: 30px;
     color: #ccc;
     cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #FFD700;
 }
 
 .star-rating input:checked ~ label {
-    color: #f5b301;
+    color: #FFD700;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.star-rating label:hover,
+/* Asegurar que las estrellas se coloreen correctamente de izquierda a derecha */
+.star-rating input:checked ~ label,
+.star-rating input:checked ~ label ~ label {
+    color: #FFD700;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 .star-rating label:hover ~ label {
-    color: #f5b301;
+    color: #ccc;
+}
+
+
+/* Button Styles */
+.black-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.black-button:hover {
+    background-color: #555;
+}
+
+/* Additional Styles for Comments */
+.comments-container .comment {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
