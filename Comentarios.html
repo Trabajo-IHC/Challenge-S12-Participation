@@ -1,11 +1,11 @@
-<!DOCTYPE COMENTARIOS>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Reportes</title>
+    <title>Comentarios</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="logo.jpeg" type="image/jpeg"> <!-- Favicon -->
+    <link rel="icon" href="images/logo-secureWalk.png" type="images/png"> <!-- Favicon -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjAL9o-4HWUEAP7hCq7hZQ474D1CLi9WQ&libraries=places"></script>
 </head>
 <body>
@@ -33,20 +33,28 @@
                 
                 <label for="reportComment">Comentario:</label>
                 <textarea id="reportComment" name="reportComment" rows="2" required></textarea>
-
+    
                 <label>Calificación:</label>
                 <div class="star-rating">
-                    <input type="radio" name="rating" value="5" id="5" required><label for="5">☆</label>
-                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    <input type="radio" name="rating" value="5" id="5" required>
+                    <label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4">
+                    <label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3">
+                    <label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2">
+                    <label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1">
+                    <label for="1">☆</label>
                 </div>
+                
+                
                 
                 <button type="submit" class="black-button">OK</button>
             </form>
         </div>
     </div>
+    
 
     <div id="commentsSection">
         <h2>Comentarios</h2>
