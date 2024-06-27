@@ -6,6 +6,7 @@
     <title>Página de Reportes</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="logo.jpeg" type="image/jpeg"> <!-- Favicon -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjAL9o-4HWUEAP7hCq7hZQ474D1CLi9WQ&libraries=places"></script>
 </head>
 <body>
     <div class="container">
@@ -13,8 +14,9 @@
         <div class="location-text">Ingrese la ubicación deseada</div>
         <div class="location-wrapper">
             <img src="images/location-icon.png" alt="Ubicación" class="location-icon">
-            <div class="location-bar"></div>
+            <input id="searchInput" type="text" placeholder="Buscar ubicación">
         </div>
+        <div id="map" class="map"></div>
     </div>
 
     <div class="report-area">
@@ -52,7 +54,7 @@
     </div>
 
     <div class="footer">
-        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <a href="index.html"><img src="images/logo.jpeg" alt="Logo" class="logo"></a>
         <div class="button-group">
             <a href="Main.html"><button class="blue-button">Reporte</button></a>
             <a href="Comentarios.html"><button class="blue-button">Comentarios</button></a>
