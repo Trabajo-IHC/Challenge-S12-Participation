@@ -1,17 +1,23 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background-color: #9fceff;
+
+    background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
     margin: 0;
     padding: 0;
+    text-align: center;
 }
+
 
 .container {
     width: 80%;
-    margin: 30px auto;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* Hacer el fondo del contenedor un poco transparente */
     padding: 20px;
-    background-color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     border-radius: 10px;
+    margin-top: 30px;
+    padding-bottom: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -19,6 +25,7 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
+
 
 .title {
     font-size: 2em;
