@@ -218,7 +218,7 @@ main {
     }
 }
 @media (max-width: 770px){
-    .footer-column{
+    .footer{
         width:50%
         margin-bottom: 30px;
     }
