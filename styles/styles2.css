@@ -45,18 +45,6 @@ header a:hover {
 .header-right {
     float: right;
 }
-  
-@media screen and (max-width: 500px) {
-    header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    
-    .header-right {
-      float: none;
-    }
-}
 
 /*Main*/
 main {
@@ -217,3 +205,16 @@ footer {
     width: 30px;
     height: 30px;
 }
+
+@media screen and (max-width: 500px) {
+    header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+}
+@media 
