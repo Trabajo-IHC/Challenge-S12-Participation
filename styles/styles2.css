@@ -217,9 +217,3 @@ footer {
       float: none;
     }
 }
-@media (max-width: 770px){
-    footer{
-        width:50%
-        margin-bottom: 10px;
-    }
-}
