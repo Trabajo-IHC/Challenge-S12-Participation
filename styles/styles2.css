@@ -137,7 +137,7 @@ main {
   }
 
 /*Footer*/
-footer {
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -217,4 +217,9 @@ footer {
       float: none;
     }
 }
-@media 
+@media (max-width: 770px){
+    .footer-column{
+        width:50%
+        margin-bottom: 30px;
+    }
+}
