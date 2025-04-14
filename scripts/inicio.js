@@ -1,25 +1,44 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
+const termsModal = document.getElementById("termsModal");
+const privacyModal = document.getElementById("privacyModal");
+const btn = document.getElementById("myBtn");
+const aboutUsFooter = document.getElementById("aboutUsFooter");
+const privacyLink = document.getElementById("privacyLink");
+const termsLink = document.getElementById("termsLink");
+const span = document.getElementsByClassName("close");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+// Abre el modal de "Sobre Nosotros"
+btn.onclick = () => modal.style.display = "block";
+aboutUsFooter.onclick = () => modal.style.display = "block";
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Abre el modal de "Términos y Condiciones"
+termsLink.onclick = (event) => {
+  event.preventDefault();
+  termsModal.style.display = "block";
+};
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+// Abre el modal de "Política de Privacidad"
+privacyLink.onclick = (event) => {
+  event.preventDefault();
+  privacyModal.style.display = "block";
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// Cerrar modales
+for (let closeSpan of span) {
+  closeSpan.onclick = () => {
     modal.style.display = "none";
+    termsModal.style.display = "none";
+    privacyModal.style.display = "none";
+  };
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+// Cerrar modal al hacer clic fuera de él
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  } else if (event.target === termsModal) {
+    termsModal.style.display = "none";
+  } else if (event.target === privacyModal) {
+    privacyModal.style.display = "none";
+  }
 }
