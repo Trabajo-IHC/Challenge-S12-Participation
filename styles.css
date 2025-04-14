@@ -1,0 +1,327 @@
+:root {
+    --color-primary: #87ceeb;
+    --color-secondary: #0000ff;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #f5f5f5;
+    --color-dark-gray: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    padding-top: 80px;
+}
+
+/* NAV fijo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-header img {
+    width: 80px;
+}
+
+.header-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.header-right a:hover {
+    background-color: var(--color-secondary);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 8%;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.main-content {
+    max-width: 500px;
+    flex: 1 1 300px;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.main-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.main-content button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.main-content button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* MAPA */
+.main-image {
+    flex: 1 1 300px;
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid var(--color-white);
+}  
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BANNER */
+.info-banner {
+    color: var(--color-white);
+    padding: 2rem 8%;
+    margin-top: 2rem;
+}
+
+.container-banner {
+    background-color: var(--color-black);
+    padding: 20px 80px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.subcontainer-information,
+.subcontainer-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.subcontainer-information h2,
+.subcontainer-information p {
+    margin-bottom: 0.5rem;
+}
+
+.container-banner button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.container-banner button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 8%;
+    background-color: var(--color-light-gray);
+}
+
+.footer-logo {
+    flex: 1 1 200px;
+}
+
+.footer-logo img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.footer-column {
+    flex: 1 1 150px;
+}
+
+.footer-column h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--color-black);
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--color-secondary);
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-white);
+    padding: 16px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.social-icons a i {
+    font-size: 24px; /* Aumenté el tamaño del icono */
+    color: var(--color-black);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: var(--color-white);
+}
+
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h1,
+.modal-content h2 {
+    color: var(--color-dark-gray);
+}
+
+.close {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-dark-gray);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--color-secondary);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 6%;
+    }
+
+    .main-content,
+    .main-image {
+        width: 100%;
+    }
+
+    .info-banner {
+        padding: 2rem 6%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 3rem 6%;
+    }
+
+    .footer-column,
+    .footer-logo {
+        width: 100%;
+    }
+}
