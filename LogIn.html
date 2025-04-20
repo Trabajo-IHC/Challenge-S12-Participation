@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <title>Inicia Sesion</title>
-    <link rel="icon" href="images/logo-secureWalk.png" type="images/png"> <!-- Favicon -->
-    <link rel="stylesheet" href="styles/style3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>Inicia Sesi贸n</title>
+  <link rel="icon" href="images/logo-secureWalk.png" type="images/png">
+  <link rel="stylesheet" href="styles/style3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
-    <div class="login-container">
-        <div class="login-info-container">
-            <hi class = "title">Ingresar</hi>
-            <link rel="icon" href="images/logo-secureWalk.png" type="images/png"> <!-- Favicon -->
-            <div class="social-login">
-                <div class="social-login-element">
-                    <img src="images/icons8-logo-de-google-48.png" alt="google-image">
-                    <span>Continuar con Google</span>
-                </div>
-                <div class="social-login-element">
-                    <img src="images/icons8-facebook-48.png" alt="facebook-image">
-                    <span>Continuar con Facebook</span>
-                </div>
-                <div class="social-login-element">
-                    <img src="images/icons8-mac-os-30.png" alt="apple-image">
-                    <span>Continuar con Apple</span>
-                </div>
-            </div>
-            <p>o</p>
-            <form class= "inputs-container">
-                <input class= "input" type="text" placeholder= "Usuario">
-                <input class= "input" type="password" placeholder= "Contraseña">
-                <p>¿Olvidaste tu contraseña? <span class="span">Clik aqui</span></p>
-                <a href="Main.html" class="btn">Iniciar Sesion</a>
-                <p>¿No tienes una cuenta? <a href="SignUp.html"><span class="span">Registrate</span></a></p>
-            </form>
+
+  <div class="login-container">
+    <div class="login-info-container">
+      <hi class="title">Ingresar</hi>
+      <div class="social-login">
+        <div class="social-login-element">
+          <img src="images/icons8-logo-de-google-48.png" alt="google-image">
+          <span>Continuar con Google</span>
         </div>
-        <img class= "image-container" src="images/logo-secureWalk.png" alt="">
+        <div class="social-login-element">
+          <img src="images/icons8-facebook-48.png" alt="facebook-image">
+          <span>Continuar con Facebook</span>
+        </div>
+        <div class="social-login-element">
+          <img src="images/icons8-mac-os-30.png" alt="apple-image">
+          <span>Continuar con Apple</span>
+        </div>
+      </div>
+      <p>o</p>
+      <form class="inputs-container">
+        <input class="input" type="text" placeholder="Usuario">
+        <input class="input" type="password" placeholder="Contrase帽a">
+        <p>驴Olvidaste tu contrase帽a? <span id="forgotPasswordLink" class="span">Click aqu铆</span></p>
+        <a href="Main.html" class="btn">Iniciar Sesi贸n</a>
+        <p>驴No tienes una cuenta? <a href="SignUp.html"><span class="span">Reg铆strate</span></a></p>
+      </form>
     </div>
+    <img class="image-container" src="images/logo-secureWalk.png" alt="">
+  </div>
+
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Recuperar contrase帽a</h2>
+      <p>Ingrese su correo electr贸nico para enviar un c贸digo de recuperaci贸n</p>
+      <input type="email" id="recoveryEmail" class="input" placeholder="Correo electr贸nico">
+      <button id="sendCodeBtn" class="btn">Enviar c贸digo</button>
+      <p id="confirmationMessage" style="display: none; margin-top: 1rem; color: green;">
+        馃摟 隆Se ha enviado un correo! Revisa tu bandeja para restaurar tu contrase帽a.
+      </p>
+    </div>
+  </div>
+
+  <script src="scripts/modalLogin.js"></script>
 </body>
 </html>
