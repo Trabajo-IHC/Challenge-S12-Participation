@@ -7,23 +7,21 @@
     --button-hover-bg: #333333;
     --light-pink: #4f60fa;
     --image-bg: #ffffff;
-
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+    background-size: cover;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-
 .container {
     width: 80%;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.9); /* Hacer el fondo del contenedor un poco transparente */
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     border-radius: 10px;
@@ -36,6 +34,7 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
+
 .login-container {
     height: auto;
     width: 90%;
@@ -215,4 +214,42 @@ body {
     .login-info-container > p {
         margin: 0;
     }
+}
+
+/* 🔐 Overlay Modal Recuperación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
 }
